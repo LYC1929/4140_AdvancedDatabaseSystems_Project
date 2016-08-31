@@ -5,7 +5,7 @@ CSCI 4140 Project: Building Database for Network Communication System
 
 The project was our team work originally shared on Dropbox in 2015. 
 
-This reporsitory is just a transplant.
+This repository is just a transplant.
 
 ***
 
