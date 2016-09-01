@@ -279,7 +279,7 @@ void content(MYSQL *conn, int op, User *user) {
 	user2.uid = user->uid;
     char comment[50] = "\0";
     // char *p = comment;
-    printf("Input b to BACKWARD or just input your comment\n");
+    printf("Input b to BACKWARD or just input your comment (limit 50 characters):\n");
     // scanf("%s", &comment);
 	fgets(comment, 50, stdin);
     if(strcmp(comment, "b\n") == 0) {
@@ -298,9 +298,10 @@ void post(MYSQL *conn, User *user) {
 	MYSQL_ROW row;
 	/* First fgets doesn't work for no reason */
 	printf("Enter Topic Title (limit 50 characters):\n");
-	fgets(title, 50, stdin);
+    fgets(title, 50, stdin);
+    fgets(title, 50, stdin);
 	char content[200];
-        printf("\nEnter Topic Content (limit 200 characters):\n");
+    printf("\nEnter Topic Content (limit 200 characters):\n");
 	fgets(content, 200, stdin);    
 	// scanf("%s", &content);
     char query[QUERY_LEN]="\0";
